@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Javascript Ex</title>
+</head>
+
+<body>
+<h3>Select Company</h3><br>
+<select id="company" onchange="display()">
+ <option value="Tata Motors">Tata Motors</option>
+ <option value="Hundai">Hundai</option>
+ <option value="Maruti">Maruti</option>
+ <option value="Mahindra">Mahindra</option>
+</select>
+
+<br><br>
+<h4 id="c_name"></h4>
+ 
+<script type="text/javascript">
+ function display()
+{
+ document.getElementById("c_name").innerHTML = document.getElementById("company").value;
+}
+</script>
+
+</body>
+</html>

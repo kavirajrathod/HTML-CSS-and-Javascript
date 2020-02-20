@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Javascript Ex</title>
+</head>
+<body>
+<script type="text/javascript">
+function sum()
+{
+var a,b,res;
+a = Number(document.getElementById("fno").value);
+b= Number(document.getElementById("sno").value);
+
+res =a+b;
+document.getElementById("res").innerHTML = "Sum of "+a+" and "+b+" is "+res;
+
+}
+</script>
+<div style="margin-left:300px;margin-top:200px">
+<h3 style="color:red">Addition Program<h3/>
+<table border="0">
+ <tr>
+   <td>First    Number :-</td>
+   <td><input  id="fno"></td>
+ </tr>
+ <tr>
+   <td>Second Number :-</td>
+   <td><input  id="sno"></td>
+ </tr>
+</table>
+<br><br>
+<input type="submit" onclick="sum()">
+<br><br>
+<label id="res">
+</div>
+</body>
+</html>

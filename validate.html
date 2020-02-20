@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Javascript Ex</title>
+</head>
+
+<body>
+ 
+  <form name="myForm" action="" method="get">
+  Name:-<input type="text" name="text1"><br><br>
+  DOB:-<input type="text" name="text2"><br><br>
+  <input type="submit" value="Submit" onclick="validate()">
+  <input type="reset" value="Reset">
+  </form>
+
+<script type="text/javascript">
+
+ function validate()
+{
+ var reg1 = /^[a-zA-Z ]{2,30}$/;
+ var reg2 = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
+ var x = document.forms["myForm"]["text1"].value;
+ var y = document.forms["myForm"]["text2"].value;
+ if(x=="")
+ {
+  window.alert("Field cant be blank");
+  
+  return false;
+ }
+
+ if(!reg1.test(x))
+ {
+   window.alert("Incorrect Name format");
+   return false;
+ }
+
+ if(y=="")
+ {
+  window.alert("DOB Field cant be blank");
+  return false;
+ }
+
+ if(!reg2.test(y))
+ {
+   window.alert("Please enter in DD/MM/YYYY format");
+   return false;
+ }
+
+}
+</script>
+
+</body>
+</html>

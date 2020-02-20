@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Javascript Ex</title>
+</head>
+
+<body> 
+<p id="para1" style="background-color:gray"></p>
+
+<script type="text/javascript">
+var msg1 = "Good Morning....!"
+var msg2 = "Good Afternoon....!";
+
+function greetings(msg)
+{
+   return msg;
+}
+
+document.getElementById("para1").innerHTML = greetings(msg2);
+document.write(greetings(msg1));
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype>
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" type="text/css"  href="reg.css"/>
+</head>
+
+<body>
+
+ <form name="myForm" action="home.html" method="get">
+  <div class="div_1">
+  <h3 class="h_1">Registration Details</h3>
+  <table align="center" class="table_1"> 
+   <tr>
+      <td><label><b>Full Name :</b></label></td>
+      <td><input type="text" name="fname" maxlength="30"></td>
+   </tr>
+   <tr>
+      <td><label><b>DOB :</label></td>
+      <td><input type="date" name="dob" ></td>
+   </tr>
+   <tr>
+      <td><label><b>Address :</label></td>
+      <td><input type="textarea" rows="6" cols="50" name="address"></td>
+   </tr>
+   <tr>
+      <td><label><b>Hobbies :</label></td>
+      <td><select>
+     <option value="reading">Reading</option>
+     <option value="movie">Movie</option>
+     <option>Swimming</option>
+     <option>Painting</option>
+     <option>Traveling</option>
+   </select></td>
+   </tr>
+   <tr>
+      <td><label><b>Mobile Number :</label></td>
+      <td><input type="text" maxlength="10"></td>
+   </tr>
+   <tr>
+      <td><label><b>Email Id:</b></label></td>
+      <td><input type="text" maxlength="30" name="email_id"></td>
+   </tr>
+   <tr>
+      <td><label><b>Gender :</label></td>
+      <td>Male:<input type="radio" name="gender" value="Male">  Female:<input type="radio" name="gender" value=Female"></td>
+   </tr>
+   <tr>
+    <td><label><b>Language Known :</label></td>
+    <td>English <input type="checkbox" name="english"> Hindi <input type="checkbox" name="hindi"> Marathi <input type="checkbox" name="marathi"></td>
+   </tr>
+
+   <tr>
+   <td></td>
+   <td><input type="submit" name="sbmit_btn" onclick="validate()">&nbsp&nbsp<input type="reset" name="reset_btn"></td>
+   </tr>
+</table>
+
+   </div>
+ </form>
+
+<script type="text/javascript" >
+
+ function validate()
+{
+var x = document.forms["myForm"]["fname"].value;
+var reg_name = /^[a-zA-Z]{3,30}$/;
+
+if(x=="")
+ { 
+  window.alert("Field can't be blank..!");
+  return false;
+ }
+else if(!reg_name.test(x))
+ {
+  window.alert("Incorrect name format...!");
+  return false;
+ }
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

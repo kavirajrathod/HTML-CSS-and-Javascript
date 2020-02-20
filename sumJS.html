@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Javascript Ex</title>
+</head>
+<body> 
+
+<script type="text/javascript">
+
+// calculate sum of numbers
+function sum()
+{
+var n1,n2,res;
+n1 = Number(document.getElementById("fno").value);
+n2= Number(document.getElementById("sno").value);
+
+res = n1+n2;
+//document.write("Sum of "+n1+" and "+n2+" is "+res);
+document.getElementById("res").innerHTML = "Sum of "+n1+" and "+n2+" is "+res;
+
+}
+
+</script>
+
+
+First Number:- <input  id="fno"><br>
+Second Number:- <input  id="sno"><br>
+<input type="submit" onclick="sum()">
+<br><br>
+<label id="res">
+
+
+</body>
+</html>
